@@ -1,0 +1,14 @@
+.header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    .wrapper {
+        .header-title {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+    }
+
+}
