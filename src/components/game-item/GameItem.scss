@@ -2,74 +2,96 @@ $color_1: white;
 $background-color_1: rgb(36, 37, 41);
 
 .home-page {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+
+        .game-item {
+            text-decoration: none;
+            color: $color_1;
+            width: 320px;
+            height: 300px;
+            background-color: $background-color_1;
+            border-radius: 15px;
+            cursor: pointer;
+            position: relative;
 
 
-
-    .game-item {
-        text-decoration: none;
-        color: $color_1;
-        width: 320px;
-        height: 300px;
-        background-color: $background-color_1;
-        border-radius: 15px;
-        cursor: pointer;
-        position: relative;
-
-
-        &:not(:last-child) {
-            margin-bottom: 30px;
-            margin-right: 50px;
-        }
-
-        .game-item-element {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            padding: 10px;
-
-            .item-details {
-                .item-title {
-                    font-size: 19px;
-                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                }
+            &:not(:last-child) {
+                margin-bottom: 30px;
+                margin-right: 50px;
             }
 
-            .item-genre {
-                font-size: 18px;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-
-            .game-cover {
-                height: 172px;
-                width: 100%;
-                background-size: cover;
-                background-position: center;
-                border-radius: 5px;
-                background-repeat: no-repeat, repeat;
-                margin-bottom: 10px;
-
-            }
-
-            .game-buy {
+            .game-item-element {
                 display: flex;
-                gap: 10px;
-                padding-top: 7px;
+                flex-direction: column;
+                gap: 5px;
+                padding: 10px;
 
-                .item-price {
-                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                .item-details {
+                    .item-title {
+                        font-size: 19px;
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    }
                 }
 
-                .addToCart {
-                    background-color: rgb(109, 56, 245);
-                    padding: 4px 18px;
-                    border-style: none;
-                    border-radius: 6px;
+                .item-genre {
+                    .game-genre {
+                        background-color: rgb(80, 82, 84);
+                        padding: 2px 5px;
+                        font-size: 13px;
+                        border-radius: 10px;
+                    }
+
+                    .game-genre:not(:last-child) {
+                        margin-right: 7px;
+                    }
+
+                    font-size: 18px;
+                    font-family: 'Trebuchet MS',
+                    'Lucida Sans Unicode',
+                    'Lucida Grande',
+                    'Lucida Sans',
+                    Arial,
+                    sans-serif;
                 }
+
+                .game-cover {
+                    height: 172px;
+                    width: 100%;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 5px;
+                    background-repeat: no-repeat, repeat;
+                    margin-bottom: 10px;
+
+                }
+
+                .game-buy {
+                    display: flex;
+                    gap: 10px;
+                    padding-top: 7px;
+
+                    .item-price {
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    }
+
+                    .addToCart {
+                        background-color: rgb(109, 56, 245);
+                        padding: 4px 18px;
+                        border-style: none;
+                        border-radius: 6px;
+                        cursor: pointer;
+                    }
+                }
+
             }
-
         }
     }
 }
