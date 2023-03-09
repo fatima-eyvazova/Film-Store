@@ -1,9 +1,28 @@
 .basket {
+    position: relative;
     display: flex;
     gap: 10px;
 
+    .items-count {
+        background-color: rgb(235, 48, 48);
+        width: 17px;
+        height: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 13px;
+        left: 14px;
+
+        span {
+            font-size: 12px;
+            color: rgb(251, 247, 247);
+        }
+    }
+
     .icon {
-        font-size: 19px
+        font-size: 22px;
     }
 
     .price-total {

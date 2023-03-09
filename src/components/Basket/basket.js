@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Basket/basket.scss'
 import { BsCart4 } from 'react-icons/bs'
 import { useSelector } from 'react-redux'
+import CartMenu from '../cart-menu/CartMenu'
+import { calcTotalPrice } from '../utils/utils'
 const Basket = () => {
     const items = useSelector(state => state.cart?.itemsInCart);
-    const totalPrice = items?.reduce((acc, game) => acc += game.price, 0);
-
+    const totalPrice = calcTotalPrice(items)
+    const [isCartMenuVisible, setisCartMenuVisible] = useState(false)
     return (
         <div className='basket'>
-            <BsCart4 className='icon' />
-            <span className='price-total'>{totalPrice}$</span>
-        </div>
+            <div className='items-count'>
+                <span>{items.length}</span>
+            </div>
+            <BsCart4 className='icon'
+                onClick={() => setisCartMenuVisible(!isCartMenuVisible)}
+            />
+            {
+                totalPrice > 0 ? <span span className='price-total'>{totalPrice}$</span> : null
+            }
+            {isCartMenuVisible && <CartMenu items={items} onClick={() => null} />}
+        </div >
     )
 }
 

@@ -2,14 +2,24 @@ import React from 'react'
 import '../game-item/GameItem.scss'
 import { GameGenre } from '../game-genre/GameGenre'
 import GameCover from '../game-cover/GameCover'
-import { useDispatch } from 'react-redux'
-import { setItemInCart } from '../../redux/reducer'
+import { useDispatch, useSelector } from 'react-redux'
+import { setItemInCart, deleteItemFromCart } from '../../redux/reducer'
+import { useState } from 'react'
 const GameItem = ({ game }) => {
+    const items = useSelector(state => state.cart.itemsInCart)
+    const isItemsInCart = items.some(item => item.id === game.id)
     const dispatch = useDispatch()
+
     const handleClick = (e) => {
         e.stopPropagation();
-        dispatch(setItemInCart(game))
+        if (isItemsInCart) {
+            dispatch(deleteItemFromCart(game.id))
+        }
+        else {
+            dispatch(setItemInCart(game))
+        }
     }
+
 
     return (
         <div className='game-item'>
@@ -26,11 +36,15 @@ const GameItem = ({ game }) => {
 
                 <div className='game-buy'>
                     <span className='item-price'>{game.price} $</span>
-                    <button className='addToCart' onClick={handleClick}>Add</button>
+
+                    <button className='addToCart' style={{ backgroundColor: isItemsInCart ? 'gray' : '#a72461' }} onClick={handleClick}>
+                        {isItemsInCart ? 'Remove' : 'add'}
+                    </button>
+
                 </div>
 
             </div>
-        </div>
+        </div >
     )
 }
 
