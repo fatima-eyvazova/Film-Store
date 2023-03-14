@@ -1,0 +1,20 @@
+.order-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+
+    .order-page-left {
+        width: 84%;
+    }
+
+    .order-page-right {
+        width: 27%;
+
+        .order-page-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+}

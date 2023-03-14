@@ -1,6 +1,7 @@
 .cart-menu {
     position: absolute;
     top: 30px;
+    background-color: rgb(36, 37, 41);
     left: -300px;
     width: 300px;
     padding: 10px 20px;
@@ -13,7 +14,6 @@
             display: flex;
             flex-direction: column;
             gap: 6px;
-            color: rgb(245, 242, 242);
 
             .title-list {
                 display: flex;
@@ -39,17 +39,21 @@
                 display: flex;
                 justify-content: space-between;
 
-                .sum {
-                    color: rgb(255, 242, 242);
-                }
+
 
                 .price-total {
-
-                    color: rgb(255, 242, 242);
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     font-weight: 400;
                 }
             }
+        }
+
+        .btn {
+            background-color: #ff347f;
+            padding: 5px 12px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
         }
     }
 }

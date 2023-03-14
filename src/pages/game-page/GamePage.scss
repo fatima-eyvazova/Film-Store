@@ -1,0 +1,64 @@
+.game-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .game-page-container {
+        width: 84%;
+
+        .game-page-title {
+            color: white;
+        }
+
+        .game-page-content {
+            display: flex;
+
+            .game-page-left {
+                width: 70%;
+            }
+
+            .game-page-right {
+                width: 30%;
+
+                .game-page-description {
+                    color: rgb(242, 234, 234);
+                }
+
+                .secondary-text {
+                    color: gray;
+                }
+
+                .game-page-genre {
+                    display: flex;
+                    gap: 3px;
+
+                    .item-genre {
+                        .game-genre {
+                            background-color: rgb(186, 180, 180);
+                        }
+                    }
+                }
+
+                .game-page-game-buy {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 10px;
+                    margin-top: 20px;
+
+                    .item-price {
+                        color: white;
+                    }
+
+                    .addToCart {
+                        padding: 4px 18px;
+                        border-style: none;
+                        border-radius: 6px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

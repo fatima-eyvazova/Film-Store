@@ -1,14 +1,16 @@
 import React from 'react'
-import '../game-item/GameItem.scss'
-import { GameGenre } from '../game-genre/GameGenre'
-import GameCover from '../game-cover/GameCover'
 import { useDispatch, useSelector } from 'react-redux'
-import { setItemInCart, deleteItemFromCart } from '../../redux/reducer'
-import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { setItemInCart, deleteItemFromCart } from '../../redux/cart/reducer'
+import GameCover from '../game-cover/GameCover'
+import { GameGenre } from '../game-genre/GameGenre'
+import '../game-item/GameItem.scss'
+import { setCurrentGame } from '../../redux/games/reducer'
 const GameItem = ({ game }) => {
     const items = useSelector(state => state.cart.itemsInCart)
     const isItemsInCart = items.some(item => item.id === game.id)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const handleClick = (e) => {
         e.stopPropagation();
@@ -20,9 +22,13 @@ const GameItem = ({ game }) => {
         }
     }
 
+    const GameClick = () => {
+        dispatch(setCurrentGame(game))
+        navigate(`/app/${game.title}`)
+    }
 
     return (
-        <div className='game-item'>
+        <div className='game-item' onClick={GameClick}>
             <div className='game-item-element'>
                 <GameCover image={game.image} />
                 <div className='item-details'>
@@ -37,8 +43,10 @@ const GameItem = ({ game }) => {
                 <div className='game-buy'>
                     <span className='item-price'>{game.price} $</span>
 
-                    <button className='addToCart' style={{ backgroundColor: isItemsInCart ? 'gray' : '#a72461' }} onClick={handleClick}>
-                        {isItemsInCart ? 'Remove' : 'add'}
+                    <button className='addToCart'
+                        style={{ backgroundColor: isItemsInCart ? 'gray' : '#ff347f' }}
+                        onClick={handleClick}>
+                        {isItemsInCart ? 'Remove' : 'Add'}
                     </button>
 
                 </div>

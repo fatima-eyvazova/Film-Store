@@ -5,17 +5,21 @@
     justify-content: center;
 
     .header-counter {
-        width: 70%;
+        width: 84%;
         display: flex;
         justify-content: space-between;
 
         .wrapper {
             .header-title {
                 text-decoration: none;
-                color: black;
+                color: white;
                 font-size: 20px;
 
             }
+        }
+
+        .basket-btn {
+            color: white;
         }
     }
 }

@@ -6,15 +6,14 @@ const CartMenu = ({ items, onClick }) => {
     const totalPrice = calcTotalPrice(items);
 
     return (
-        <div className='cart-menu' style={{ backgroundColor: items.length > 0 ? 'rgb(36, 37, 41)' : 'white' }}>
-
+        <div className='cart-menu'>
             <div className='game-list'>
                 <span className='title'>
                     {
                         items.length > 0 ? items.map(game => <li className='title-list'>
                             <span>{game.title}</span>
                             <span>{game.price} $</span>
-                        </li>) : null
+                        </li>) : 'Basket empty'
                     }
                 </span>
             </div>
@@ -26,8 +25,7 @@ const CartMenu = ({ items, onClick }) => {
                             <span className='price-total'>{totalPrice} $</span>
                         </div>
                     </div>
-                    <button
-                        onClick={onClick}>checkout</button>
+                    <button onClick={onClick} className='btn'>checkout</button>
                 </div>
                 : null
             }

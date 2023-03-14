@@ -14,7 +14,6 @@ $background-color_1: rgb(36, 37, 41);
 
         .game-item {
             text-decoration: none;
-            color: $color_1;
             width: 320px;
             height: 300px;
             background-color: $background-color_1;
@@ -41,26 +40,6 @@ $background-color_1: rgb(36, 37, 41);
                     }
                 }
 
-                .item-genre {
-                    .game-genre {
-                        background-color: rgb(80, 82, 84);
-                        padding: 2px 5px;
-                        font-size: 13px;
-                        border-radius: 10px;
-                    }
-
-                    .game-genre:not(:last-child) {
-                        margin-right: 7px;
-                    }
-
-                    font-size: 18px;
-                    font-family: 'Trebuchet MS',
-                    'Lucida Sans Unicode',
-                    'Lucida Grande',
-                    'Lucida Sans',
-                    Arial,
-                    sans-serif;
-                }
 
                 .game-cover {
                     height: 172px;
@@ -77,18 +56,17 @@ $background-color_1: rgb(36, 37, 41);
                     display: flex;
                     gap: 10px;
                     padding-top: 7px;
+                    align-items: baseline;
 
                     .item-price {
                         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                     }
 
                     .addToCart {
-                        background-color: rgb(95, 58, 230);
                         padding: 4px 18px;
                         border-style: none;
                         border-radius: 6px;
                         cursor: pointer;
-
                     }
                 }
 
