@@ -7,7 +7,7 @@ const Header = () => {
         <div className='header'>
             <div className='header-counter'>
                 <div className='wrapper'>
-                    <Link to='/' className='header-title'>Game Store</Link>
+                    <Link to='/' className='header-title'>Film Store</Link>
                 </div>
                 <div className='basket-btn'>
                     <Basket />

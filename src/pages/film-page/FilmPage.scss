@@ -1,28 +1,28 @@
-.game-page {
+.film-page {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    .game-page-container {
+    .film-page-container {
         width: 84%;
 
-        .game-page-title {
+        .film-page-title {
             color: white;
         }
 
-        .game-page-content {
+        .film-page-content {
             display: flex;
 
-            .game-page-left {
+            .film-page-left {
                 width: 70%;
             }
 
-            .game-page-right {
+            .film-page-right {
                 width: 30%;
 
-                .game-page-description {
+                .film-page-description {
                     color: rgb(242, 234, 234);
                 }
 
@@ -30,18 +30,18 @@
                     color: gray;
                 }
 
-                .game-page-genre {
+                .film-page-genre {
                     display: flex;
                     gap: 3px;
 
                     .item-genre {
-                        .game-genre {
+                        .film-genre {
                             background-color: rgb(186, 180, 180);
                         }
                     }
                 }
 
-                .game-page-game-buy {
+                .film-page-film-buy {
                     display: flex;
                     justify-content: flex-end;
                     gap: 10px;
@@ -62,3 +62,4 @@
         }
     }
 }
+

@@ -7,12 +7,12 @@ const CartMenu = ({ items, onClick }) => {
 
     return (
         <div className='cart-menu'>
-            <div className='game-list'>
+            <div className='film-list'>
                 <span className='title'>
                     {
-                        items.length > 0 ? items.map(game => <li className='title-list'>
-                            <span>{game.title}</span>
-                            <span>{game.price} $</span>
+                        items.length > 0 ? items.map(film => <li className='title-list'>
+                            <span>{film.title}</span>
+                            <span>{film.price} $</span>
                         </li>) : 'Basket empty'
                     }
                 </span>
@@ -20,7 +20,7 @@ const CartMenu = ({ items, onClick }) => {
             {items.length > 0 ?
                 <div className='total-price'>
                     <div className='cart-price-sum'>
-                        <div className='games-price'>
+                        <div className='films-price'>
                             <span className='sum'>Sum:</span>
                             <span className='price-total'>{totalPrice} $</span>
                         </div>

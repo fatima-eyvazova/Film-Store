@@ -1,60 +1,60 @@
 import React from 'react'
-import GameItem from '../../components/game-item/GameItem'
+import FilmItem from '../../components/film-item/FilmItem'
 import '../home/Home.scss'
-const games = [
+const films = [
     {
-        image: '/game-covers/forza_5.jpeg',
-        title: 'Forza Horizon 5',
-        genres: ['Race', 'Simulator', 'Open world'],
+        image: '/film-covers/harry.webp',
+        title: "Harry Potter",
+        genres: ['Fantastic', 'Fictional', 'Adventure'],
         price: 10,
-        video: 'https://www.youtube.com/embed/FYH9n37B7Yw',
+        video: 'https://www.youtube.com/embed/jBltxS8HfQ4',
         id: 1,
-        description: "An endless kaleidoscope of Horizon adventures awaits you! Take exciting trips through the incredibly beautiful and original world of Mexico behind the wheel of the greatest cars in history. Start your Horizon adventure today by adding the game to your wishlist!"
+        description: 'Throughout the series, Harry is described as having his father`s perpetually untidy black hair, his mother`s bright green eyes and a lightning bolt- shaped scar on his forehead.He is further described as "small and skinny for his age" with "a thin face" and "knobbly knees", and he wears Windsor glasses.'
     },
     {
-        image: '/game-covers/battlefield_2042.jpeg',
-        title: 'Battlefield 2042',
-        genres: ['Action', 'Shooter', 'War'],
-        video: 'https://www.youtube.com/embed/ASzOzrB-a9E',
+        image: '/film-covers/home-alone3.webp',
+        title: 'Home Alone',
+        genres: ['Comedy', 'Child', 'Adventure'],
+        video: 'https://www.youtube.com/embed/dzdpqRGA1qc',
         price: 7,
         id: 2,
-        description: 'Battlefield™ 2042 is a first-person shooter in which the series returns to legendary large-scale battles. In the future, where chaos reigns, adapt and thrive on the ever-changing battlefield thanks to your squad and arsenal of the latest technologies.'
+        description: 'HOME ALONE is the story of 8-year-old Kevin (Macaulay Culkin), a mischievous kid who feels largely ignored by his large extended family. While everyone is preparing for a Christmas vacation in Paris, Kevin gets in trouble, is banished to the attic overnight, and wishes his family would just disappear.'
     },
     {
-        image: '/game-covers/life_is_strange_true_colors.jpeg',
-        title: 'Life is Strange True Colors',
-        genres: ['Deep story', 'Protagonist'],
-        video: 'https://www.youtube.com/embed/b6CkzwVAr0M',
+        image: '/film-covers/cindrella.webp',
+        title: 'Cinderella',
+        genres: ['Science fiction', 'Adventure'],
+        video: 'https://www.youtube.com/embed/20DF6U1HcGQ',
         price: 12,
         id: 3,
-        description: 'Alex Chen hides from everyone his "curse" - the supernatural ability to read the strong emotions of others and influence them. But when her brother dies - allegedly in an accident - Alex uses her to find out the truth.'
+        description: 'Cinderella is a young woman with medium-length strawberry-blonde hair, blue eyes, and fair complexion. After her father dies, she is forced into servitude in her own home and is tormented by her evil stepmother, Lady Tremaine, and two stepsisters, Anastasia and Drizella.'
     },
     {
-        image: '/game-covers/gta_v.jpeg',
-        title: 'Grand Theft Auto V',
-        genres: ['Open world', 'Action'],
-        video: 'https://www.youtube.com/embed/QkkoHAzjnUs',
+        image: '/film-covers/ella.webp',
+        title: 'Ella Enchanted',
+        genres: ['Family', 'Comedy'],
+        video: 'https://www.youtube.com/embed/OoSUHgs7hCs',
         price: 6,
         id: 4,
-        description: 'Grand Theft Auto V for PC allows players to explore the iconic world of Los Santos and Blaine County in resolutions up to 4k and beyond at 60 frames per second.'
+        description: 'Ella Enchanted is a Newbery Honor book written by Gail Carson Levine and published in 1997. The story is a retelling of Cinderella featuring various mythical creatures including fairies, elves, ogres, gnomes, and giants'
     },
     {
-        image: '/game-covers/rainbow_siege.jpeg',
-        title: 'Tom Clancy\'s Rainbow Six® Siege',
-        video: 'https://www.youtube.com/embed/6wlvYh0h63k',
-        genres: ['Tactics', 'Shooter'],
+        image: '/film-covers/malefiz.webp',
+        title: 'Malefiz',
+        video: 'https://www.youtube.com/embed/JIIgXEGAZgE',
+        genres: ['Action', 'Adventure'],
         price: 3,
         id: 5,
-        description: 'Tom Clancy\'s Rainbow Six Siege is the sequel to the acclaimed first-person shooter developed by Ubisoft Montreal.'
+        description: 'Malefiz (also known as Barricade) is a strategy board game, invented by Werner Schöppner and published by Ravensburger since 1960. It is a non-circular descendant of the ancient Indian board game Pachisi.'
     },
     {
-        image: '/game-covers/assassins_creed_valhalla.png',
-        title: 'Assassin’s Creed Valhalla',
-        genres: ['Parkour', 'RPG', 'Open world'],
-        video: 'https://www.youtube.com/embed/ssrNcwxALS4',
+        image: '/film-covers/alice.webp',
+        title: 'Alice in Wonderland',
+        genres: ['Fantastic', 'Adventure', 'Science fiction'],
+        video: 'https://www.youtube.com/embed/9POCgSRVvf0',
         price: 5,
         id: 6,
-        description: 'Assassin`s Creed Valhalla is a multi-platform action/RPG video game developed by Ubisoft Montreal and published by Ubisoft. It is the twelfth installment in the Assassin`s Creed series.'
+        description: "Alice's Adventures in Wonderland by Lewis Carroll is a story about Alice who falls down a rabbit hole and lands into a fantasy world that is full of weird, wonderful people and animals. It is classic children's book that is also popular with adults."
     },
 ]
 
@@ -63,7 +63,7 @@ const Home = () => {
     return (
         <div className='home-page'>
             <div className='container'>
-                {games.map(game => <GameItem game={game} key={game.id} />)}
+                {films.map(film => <FilmItem film={film} key={film.id} />)}
             </div>
         </div>
     )
