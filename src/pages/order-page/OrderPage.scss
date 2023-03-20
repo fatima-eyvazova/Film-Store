@@ -35,3 +35,20 @@
         }
     }
 }
+
+@media only screen and (max-width:768px) {
+    .order-page {
+        display: flex;
+        flex-direction: column;
+
+        .order-page-left {
+            width: 600px;
+
+            .order-item {
+                .order-item-cover {
+                    width: 273px;
+                }
+            }
+        }
+    }
+}

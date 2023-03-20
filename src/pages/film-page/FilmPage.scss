@@ -22,8 +22,14 @@
             .film-page-right {
                 width: 30%;
 
-                .film-page-description {
-                    color: rgb(242, 234, 234);
+                .image-description {
+                    flex-direction: column;
+                    display: flex;
+
+                    .film-page-description {
+                        color: rgb(242, 234, 234);
+                    }
+
                 }
 
                 .secondary-text {
@@ -63,3 +69,59 @@
     }
 }
 
+@media only screen and (max-width:768px) {
+    .film-page {
+        .film-page-container {
+            .film-page-content {
+                display: flex;
+                flex-direction: column;
+
+                .film-page-right {
+                    width: 500px;
+
+                    .image-description {
+                        .film-cover {
+                            display: none;
+                        }
+                    }
+
+                    .film-page-description {
+                        width: 476px;
+                    }
+                }
+
+                .film-page-left {
+                    iframe {
+                        width: 500px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:420px) {
+    .film-page {
+        .film-page-container {
+            .film-page-content {
+                .film-page-right {
+                    width: 400px;
+
+                    .image-description {
+                        .film-page-description {
+                            width: 390px;
+                        }
+                    }
+                }
+
+                .film-page-left {
+
+                    iframe {
+                        width: 380px;
+                    }
+                }
+            }
+        }
+    }
+}
