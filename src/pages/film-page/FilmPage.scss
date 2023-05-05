@@ -103,14 +103,19 @@
 
 @media only screen and (max-width:420px) {
     .film-page {
+
         .film-page-container {
             .film-page-content {
+
+
                 .film-page-right {
-                    width: 400px;
+                    width: auto;
 
                     .image-description {
+                        width: 210px;
+
                         .film-page-description {
-                            width: 390px;
+                            width: 310px;
                         }
                     }
                 }
@@ -118,7 +123,8 @@
                 .film-page-left {
 
                     iframe {
-                        width: 380px;
+                        width: auto;
+
                     }
                 }
             }

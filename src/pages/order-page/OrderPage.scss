@@ -42,7 +42,7 @@
         flex-direction: column;
 
         .order-page-left {
-            width: 600px;
+            width: auto;
 
             .order-item {
                 .order-item-cover {
@@ -50,5 +50,14 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width:420px) {
+    .order-page {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

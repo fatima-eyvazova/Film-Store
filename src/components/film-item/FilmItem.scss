@@ -1,97 +1,78 @@
 $background-color_1: rgb(36, 37, 41);
 
-.home-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 40px;
 
-    .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-
-        .film-item {
-            text-decoration: none;
-            width: 320px;
-            height: 300px;
-            background-color: $background-color_1;
-            border-radius: 15px;
-            cursor: pointer;
-            position: relative;
+.film-item {
+    text-decoration: none;
+    width: 320px;
+    height: 300px;
+    background-color: $background-color_1;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
 
 
-            &:not(:last-child) {
-                margin-bottom: 30px;
-                margin-right: 50px;
-            }
+    &:not(:last-child) {
+        margin-bottom: 30px;
+        margin-right: 50px;
+    }
 
-            .film-item-element {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                padding: 10px;
+    .film-item-element {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
 
-                .item-details {
-                    .item-title {
-                        font-size: 19px;
-                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                    }
-                }
-
-
-                .film-cover {
-                    height: 172px;
-                    width: 100%;
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 5px;
-                    background-repeat: no-repeat, repeat;
-                    margin-bottom: 10px;
-
-                }
-
-                .film-buy {
-                    display: flex;
-                    gap: 10px;
-                    padding-top: 7px;
-                    align-items: baseline;
-
-                    .item-price {
-                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                    }
-
-                    .addToCart {
-                        padding: 4px 18px;
-                        border-style: none;
-                        border-radius: 6px;
-                        cursor: pointer;
-                    }
-                }
-
+        .item-details {
+            .item-title {
+                font-size: 19px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             }
         }
+
+
+        .film-cover {
+            height: 172px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            background-repeat: no-repeat, repeat;
+            margin-bottom: 10px;
+
+        }
+
+        .film-buy {
+            display: flex;
+            gap: 10px;
+            padding-top: 7px;
+            align-items: baseline;
+
+            .item-price {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .addToCart {
+                padding: 4px 18px;
+                border-style: none;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+        }
+
     }
 }
 
+
 @media only screen and (max-width:768px) {
-    .home-page {
 
-        .container {
-            height: 100vh;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
 
-            .film-item {
-                .film-item-element {
-                    position: absolute;
-                    bottom: 10px;
+    .film-item {
+        .film-item-element {
+            position: absolute;
+            bottom: 10px;
 
-                    .film-cover {
-                        width: 297px;
-                    }
-                }
+            .film-cover {
+                width: 297px;
             }
         }
     }

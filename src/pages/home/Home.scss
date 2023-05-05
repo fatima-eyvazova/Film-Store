@@ -1,7 +1,36 @@
 .home-page {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
 
     .container {
         width: 84%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .home-page {
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
+    }
+}
+
+@media only screen and (max-width:420px) {
+    .home-page {
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+        }
     }
 }

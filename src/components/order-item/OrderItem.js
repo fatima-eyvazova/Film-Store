@@ -12,11 +12,13 @@ const OrderItem = ({ film }) => {
     return (
         <>
             <div className='order-item'>
-                <div className='order-item-cover'>
-                    <FilmCover image={film.image} />
-                </div>
-                <div className='order-item-title'>
-                    <span>{film.title}</span>
+                <div className='order-cover-title'>
+                    <div className='order-item-cover'>
+                        <FilmCover image={film.image} />
+                    </div>
+                    <div className='order-item-title'>
+                        <span>{film.title}</span>
+                    </div>
                 </div>
                 <div className='order-item-price'>
                     <span>{film.price} $</span>
